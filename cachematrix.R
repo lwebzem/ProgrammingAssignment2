@@ -41,11 +41,11 @@ cacheSolve <- function(x, ...) {
 
     # If the inverse is already calculated, return it
     if (!is.null(inv)) {
-        message("getting cached data")
+        message("providing cached matrix")
         return(inv)
     }
 
-    # The inverse is not yet calculated, so calculate it
+    # The inverse is not yet calculated, so calculate it using solve
     data <- x$get()
     inv <- solve(data, ...)
 
